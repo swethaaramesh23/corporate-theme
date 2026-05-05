@@ -4,10 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     if (mobileBtn && navLinks) {
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileBtn.innerHTML = navLinks.classList.contains('active') ? '&times;' : '&#9776;';
-            mobileBtn.style.fontSize = navLinks.classList.contains('active') ? '2rem' : '1.5rem';
+        const toggleMenu = (forceClose) => {
+            if (forceClose) {
+                navLinks.classList.remove('active');
+            } else {
+                navLinks.classList.toggle('active');
+            }
+            const isOpen = navLinks.classList.contains('active');
+            document.body.classList.toggle('menu-open', isOpen);
+            mobileBtn.innerHTML = isOpen ? '&times;' : '&#9776;';
+            mobileBtn.style.fontSize = isOpen ? '2rem' : '1.5rem';
+        };
+
+        mobileBtn.addEventListener('click', () => toggleMenu(false));
+
+        // Close menu when a nav link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleMenu(true);
+                }
+            });
         });
     }
 
