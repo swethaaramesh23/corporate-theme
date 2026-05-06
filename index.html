@@ -10,7 +10,7 @@
 </head>
 
 <body>
-   
+
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -32,22 +32,59 @@
 
     <main>
         <!-- Hero -->
-        <section class="hero">
-            <img src="assets/hero_bg.png" alt="" class="hero-bg">
+        <section class="hero" style="position:relative; overflow:hidden; background: var(--bg-light);">
+            <img src="assets/hero_bg.webp" alt="" class="hero-bg"
+                style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity: 0.1;">
             <div class="container">
-                <div class="hero-content">
-                    <span class="hero-subtitle animate-on-scroll">Welcome to the future</span>
-                    <h1 class="animate-on-scroll" style="transition-delay:0.2s">Empowering Your Business Through
-                        Innovation</h1>
-                    <p class="animate-on-scroll" style="transition-delay:0.4s">We provide cutting-edge solutions for
-                        modern enterprises to scale, adapt, and lead in today's fast-paced digital economy.</p>
-                    <div class="hero-buttons animate-on-scroll" style="transition-delay:0.6s">
-                        <a href="404.html" class="btn btn-primary">Our Services</a>
-                        <a href="404.html" class="btn btn-outline">Contact Us</a>
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="hero-subtitle animate-on-scroll">Welcome to the future</span>
+                        <h1 class="animate-on-scroll" style="transition-delay:0.2s; color: var(--secondary-color);">
+                            Empowering Your Business Through Innovation</h1>
+                        <p class="animate-on-scroll" style="transition-delay:0.4s; font-size: 1.1rem;">We provide
+                            cutting‑edge solutions for modern enterprises to scale, adapt, and lead in today’s
+                            fast‑paced digital security landscape.</p>
+                        <div class="hero-buttons animate-on-scroll" style="transition-delay:0.6s">
+                            <a href="404.html" class="btn btn-primary">Our Services</a>
+                            <a href="404.html" class="btn btn-outline">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image animate-on-scroll" style="transition-delay:0.4s">
+                        <img src="assets/service_hero.webp" alt="Corporate Solutions" class="hero-img-main">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- New Our Solutions Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="animate-on-scroll" style="transition-delay:0.2s">Our Solutions</h2>
+                <div class="grid-3">
+                    <div class="card animate-on-scroll" style="transition-delay:0.1s">
+                        <img src="assets/services_hero.webp" alt="Global Solutions" class="card-img" loading="lazy" />
+                        <h3>Global Enterprise</h3>
+                        <p>We deliver scalable cloud-based enterprise solutions that help businesses expand globally.
+                            Our platforms ensure high performance, security, and seamless integration across all
+                            operations.</p>
+                    </div>
+                    <div class="card animate-on-scroll" style="transition-delay:0.2s">
+                        <img src="assets/about_team.webp" alt="Expert Team" class="card-img" loading="lazy" />
+                        <h3>Expert Strategy</h3>
+                        <p>Our experts provide data-driven insights and strategic consulting to help you make smarter
+                            business decisions, optimize performance, and achieve long-term growth</p>
+                    </div>
+                    <div class="card animate-on-scroll" style="transition-delay:0.3s">
+                        <img src="assets/career_hero.webp" alt="Future Ready" class="card-img" loading="lazy" />
+                        <h3>Future Operations</h3>
+                        <p>We implement advanced security systems and modern operational frameworks to protect your
+                            business and ensure smooth, efficient, and future-ready processes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- Features -->
         <section class="section">
@@ -66,7 +103,8 @@
                                 <path d="M22 12A10 10 0 0 0 12 2v10z" />
                             </svg></div>
                         <h3>Data Analytics</h3>
-                        <p>Turn raw data into actionable insights with our advanced analytics platforms.</p>
+                        <p>Transform your raw data into meaningful insights with our advanced analytics solutions. We
+                            help you make smarter, data-driven decisions for business growth.</p>
                     </div>
                     <div class="card animate-on-scroll" style="transition-delay:0.2s">
                         <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -74,7 +112,8 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg></div>
                         <h3>Enterprise Security</h3>
-                        <p>Bank-grade security protocols ensuring your company data is always protected.</p>
+                        <p>Protect your business with enterprise-grade security systems. We ensure complete data
+                            protection, risk management, and secure digital operations.</p>
                     </div>
                     <div class="card animate-on-scroll" style="transition-delay:0.3s">
                         <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -83,7 +122,8 @@
                                 <polyline points="12 6 12 12 16 14" />
                             </svg></div>
                         <h3>24/7 Support</h3>
-                        <p>Our global team is available around the clock to support your critical infrastructure.</p>
+                        <p>Our expert team is available around the clock to assist you. We ensure your systems run
+                            smoothly with continuous monitoring and quick issue resolution.</p>
                     </div>
                 </div>
             </div>
@@ -165,64 +205,75 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="margin-bottom:1.5rem;"><img src="logo1.webp"
-                            alt="Stackly Logo" style="height: 32px; width: auto;"></a>
-                    <p>Pioneering the future of enterprise software solutions. We build for scale, security, and
-                        performance.</p>
-
+                    <a href="index.html" class="logo" style="margin-bottom:1.5rem; display: block;">
+                        <img src="logo1.webp" alt="Stackly Logo" style="height: 32px; width: auto;">
+                    </a>
+                    <p>Stackly is a global leader in enterprise software solutions, empowering businesses with
+                        innovative technology to scale and succeed in the digital age.</p>
+                    <div class="footer-contact" style="margin-top: 1.5rem;">
+                        <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            info@stackly.com
+                        </p>
+                        <p style="display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            +91 98765 43210
+                        </p>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Company</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="404.html">About Us</a></li>
                         <li><a href="404.html">Services</a></li>
-                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Insights</a></li>
                         <li><a href="404.html">Careers</a></li>
-                        <li><a href="404.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Resources</h4>
+                    <h4>Support</h4>
                     <ul>
-                        <li><a href="404.html">Documentation</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
                         <li><a href="404.html">Help Center</a></li>
-                        <li><a href="404.html">API Reference</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
                         <li><a href="404.html">Privacy Policy</a></li>
                         <li><a href="404.html">Terms of Service</a></li>
-                        <li><a href="404.html">Contact</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest innovations and industry insights.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                        </svg></a>
-                    <a href="#" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
+                    <a href="#" class="social-icon" title="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
                             <path
-                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z" />
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg></a>
-                    <a href="#" class="social-icon" title="Twitter"><svg viewBox="0 0 24 24" fill="currentColor">
+                    <a href="#" class="social-icon" title="Twitter"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
                             <path
-                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                         </svg></a>
-                    <a href="#" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg></a>
-                    <a href="#" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect x="2" y="9" width="4" height="12" />
-                            <circle cx="4" cy="4" r="2" />
+                    <a href="#" class="social-icon" title="Facebook"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                         </svg></a>
                 </div>
             </div>
